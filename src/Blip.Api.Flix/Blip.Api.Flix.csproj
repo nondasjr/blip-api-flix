@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.2\Blip.Api.Flix.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.2\Blip.Api.Flix.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
+    <Folder Include="Middleware\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\Config\" />
+    <Folder Include="Data\Context\" />
+    <Folder Include="Data\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blip.HttpClient" Version="2.4.0" />
+    <PackageReference Include="Lime.Protocol" Version="0.8.53-beta" />
+    <PackageReference Include="Lime.Protocol.Serialization" Version="0.7.278" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+<Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+</PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="RestEase" Version="1.4.7" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.2" />
+    <PackageReference Include="Serilog.Exceptions" Version="4.1.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="2.6.1" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
+    <PackageReference Include="SimpleInjector" Version="4.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0" />
+    <PackageReference Include="Take.Blip.Client" Version="0.5.176-beta" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.6" />
+    <PackageReference Include="SlugGenerator" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190807180453_AddCategoryIdonSubcategori.Designer.cs" />
+    <Compile Remove="Migrations\20190807181205_AddCategoryIdonSubcategoriString.cs" />
+    <Compile Remove="Migrations\20190807181205_AddCategoryIdonSubcategoriString.Designer.cs" />
+    <Compile Remove="Migrations\20190807180453_AddCategoryIdonSubcategori.cs" />
+    <Compile Remove="Migrations\20190807181417_updatetypeidtostring.cs" />
+    <Compile Remove="Migrations\20190807181417_updatetypeidtostring.Designer.cs" />
+    <Compile Remove="Migrations\20190807143620_initial.cs" />
+    <Compile Remove="Migrations\20190807160924_AddSubcategoryAndMovies.cs" />
+    <Compile Remove="Migrations\20190807160924_AddSubcategoryAndMovies.Designer.cs" />
+    <Compile Remove="Migrations\20190807143620_initial.Designer.cs" />
+    <Compile Remove="Migrations\SwitchContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20190807180214_addSubcatIdonMovie.cs" />
+    <Compile Remove="Migrations\20190807180214_addSubcatIdonMovie.Designer.cs" />
+    <Compile Remove="Migrations\20190807181554_updatetypeidtostring.cs" />
+    <Compile Remove="Migrations\20190807181554_updatetypeidtostring.Designer.cs" />
+    <Compile Remove="Migrations\20190807182457_initial.cs" />
+    <Compile Remove="Migrations\20190807182457_initial.Designer.cs" />
+    <Compile Remove="Migrations\20190807182746_initial.cs" />
+    <Compile Remove="Migrations\20190807182746_initial.Designer.cs" />
+    <Compile Remove="Migrations\20190807183059_initial.cs" />
+    <Compile Remove="Migrations\SwitchContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20190807183059_initial.Designer.cs" />
+    <Compile Remove="Migrations\20190807183302_addcategoryid.Designer.cs" />
+    <Compile Remove="Migrations\20190807183302_addcategoryid.cs" />
+    <Compile Remove="Migrations\20190807183519_addsubcategoryid.cs" />
+    <Compile Remove="Migrations\20190807183519_addsubcategoryid.Designer.cs" />
+    <Compile Remove="Migrations\20190807183706_addsubcategoryidl.Designer.cs" />
+    <Compile Remove="Migrations\20190807183706_addsubcategoryidl.cs" />
+    <Compile Remove="Migrations\20190807210027_initial.cs" />
+    <Compile Remove="Migrations\20190807210027_initial.Designer.cs" />
+    <Compile Remove="Migrations\20190808171949_createslug.cs" />
+    <Compile Remove="Migrations\20190808171949_createslug.Designer.cs" />
+    <Compile Remove="Controllers\ValuesController.cs" />
+  </ItemGroup>
+</Project>
