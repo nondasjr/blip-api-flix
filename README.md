@@ -5,12 +5,10 @@ TODO
 
 ## Setup & Running
 
-### Setup Azure Credentials
 
 You need to update ``src/appsettings.json``
 
 Properties to be configured:
-
 
 
 ````
